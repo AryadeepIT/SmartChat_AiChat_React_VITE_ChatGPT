@@ -74,6 +74,7 @@ body,
   border-radius: 5px;
   padding: 0 10px;
   margin: 10px 0;
+  font-family: Helvetica, sans-serif;
   background-color: $primary-600;
   color: $tertiary-50;
 }
@@ -528,6 +529,23 @@ body,
   background-color: $primary-800 !important;
   color: $primary-400 !important;
   border: 1px solid $primary-400 !important;
+}
+
+.button {
+  background-color: rgb(11, 155, 238);;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border-color: rgb(18, 128, 192);
+  font-family: cursive;
+  font-size: 20px;
+  
+}
+
+.button:hover{
+  background-color: rgb(18, 128, 192);
+  color: white;
 }
 
 #ce-settings-photos-dropdown .ce-dropdown-children {
