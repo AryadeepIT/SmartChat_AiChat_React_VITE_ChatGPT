@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
 
+@font-face {
+  font-family: Brightwall;
+  src: url(../src/fonts/Brightwall.ttf);
+}
+
+@font-face {
+  font-family: Antipasto;
+  src: url(../src/fonts/AntipastoPro_trial.ttf);
+}
+
+
+
 $gray-300: #a3a3a3;
 $gray-400: #858585;
 $primary-400: #35596c;
@@ -79,16 +91,7 @@ body,
   color: $tertiary-50;
 }
 
-.register-change {
-  text-decoration: underline;
-  color: $secondary-500;
-}
 
-.register-change:hover {
-  text-decoration: underline;
-  color: $tertiary-100;
-  cursor: pointer;
-}
 
 /* Chat Styling */
 .ce-chat-engine {
@@ -132,8 +135,8 @@ body,
 }
 
 .icon-phone {
-  width: 16px !important;
-  height: 16px !important;
+  width: 0px !important;
+  height: 0px !important;
 }
 
 .icon-chat {
@@ -210,14 +213,14 @@ body,
 }
 
 .message-form-icon-airplane {
-  color: $secondary-500 !important;
+  color: #40916c !important;
   width: 25px !important;
   height: 25px !important;
 }
 
 .message-form-icon-clip:hover,
 .message-form-icon-airplane:hover {
-  color: $secondary-800 !important;
+  color: #f4a259 !important;
   cursor: pointer;
 }
 
@@ -269,9 +272,10 @@ body,
 .ce-chat-form-button {
   border: none !important;
   border-radius: 33px !important;
-  color: $primary-600 !important;
+  color: #1b4332 !important;
   padding: 4px 15px !important;
   top: 15px !important;
+  background-color: #95d5b2 !important;
 }
 
 .ce-chat-list {
@@ -283,6 +287,13 @@ body,
   padding: 0px 20px !important;
 }
 
+.ce-chat-card{
+  background-color: #d8f3dc !important;
+  color: #1b4332;
+}
+
+
+
 .ce-chat-card-title {
   top: 16px !important;
   font-family: "Rubik" !important;
@@ -290,9 +301,9 @@ body,
 
 .ce-chat-card-subtitle {
   bottom: 16px !important;
-  color: $tertiary-100 !important;
+  color: #1b4332 !important;
   font-family: "Rubik" !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .ce-chat-card-time-stamp {
@@ -303,7 +314,7 @@ body,
 }
 
 .ce-active-chat-card {
-  background-color: $secondary-800 !important;
+  background-color: #40916c !important;
   color: $tertiary-100 !important;
 }
 
@@ -418,16 +429,16 @@ body,
 
 .ce-my-message-body {
   font-family: "Rubik" !important;
-  background-color: $secondary-500 !important;
-  color: $tertiary-50 !important;
+  background-color: #f4a259 !important;
+  color: black !important;
   border-radius: 8px !important;
   font-size: 14px !important;
 }
 
 .ce-their-message-body {
   font-family: "Rubik" !important;
-  background-color: $gray-300 !important;
-  color: $tertiary-50 !important;
+  background-color: #95d5b2 !important;
+  color: black !important;
   border-radius: 8px !important;
   font-size: 14px !important;
 }
@@ -531,22 +542,7 @@ body,
   border: 1px solid $primary-400 !important;
 }
 
-.button {
-  background-color: rgb(11, 155, 238);;
-  cursor: pointer;
-  height: 40px;
-  width: 100px;
-  border-radius: 10px;
-  border-color: rgb(18, 128, 192);
-  font-family: cursive;
-  font-size: 20px;
-  
-}
 
-.button:hover{
-  background-color: rgb(18, 128, 192);
-  color: white;
-}
 
 #ce-settings-photos-dropdown .ce-dropdown-children {
   padding: 0 25px !important;
@@ -568,3 +564,94 @@ body,
 ::-webkit-scrollbar-track:hover {
   background: $primary-700;
 }
+
+
+/* Login and Signup page */
+
+.title{
+  font-family: Brightwall;
+  font-size: 40px;
+  color: #52b788;
+}
+
+.register-change {
+  text-decoration: none;
+  color: #f4a259;
+}
+
+.register-change:hover {
+  text-decoration: none;
+  color: $tertiary-100;
+  cursor: pointer;
+}
+
+.button {
+  font-family: Antipasto;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+button::before {
+	content: "";
+  background: linear-gradient(
+    45deg,
+    #d8f3dc,
+    #b7e4c7,
+    #95d5b2,
+    #74c69d,
+    #52b788,
+    #40916c,
+    #2d6a4f,
+    #1b4332,
+    #081c15
+	);
+
+	position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button::after {
+	z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
