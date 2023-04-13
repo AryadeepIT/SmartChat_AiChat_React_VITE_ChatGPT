@@ -5,7 +5,7 @@ SmartChat is an AI-powered chatbot built with React, VITE, and ChatGPT. It uses 
 ### Features
 
 -   Conversational UI
--   AI-powered responses
+-   AI-powered responses 
 -   Quick and easy setup
 
 ### Installation
